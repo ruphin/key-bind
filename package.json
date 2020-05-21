@@ -1,0 +1,36 @@
+{
+  "name": "@ruphin/key-bind",
+  "version": "0.0.0",
+  "description": "A simple keybinding element",
+  "main": "key-bind.js",
+  "module": "key-bind.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "key-bind.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruphin/key-bind.git"
+  },
+  "author": "Goffert van Gool <ruphin@ruphin.net>",
+  "keywords": [
+    "web-components",
+    "webcomponents",
+    "keybinding",
+    "keybind",
+    "hotkey",
+    "key",
+    "bind"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "es-dev-server",
+    "release": "np"
+  },
+  "devDependencies": {
+    "es-dev-server": "^1.50.6",
+    "np": "^6.2.3"
+  }
+}

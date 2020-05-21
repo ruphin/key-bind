@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+/>
+
+<script type="module" src="/key-bind.js"></script>
+
+<style>
+  body {
+    background: #223;
+  }
+
+  p {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+  }
+</style>
+
+<p>
+  Press ← → ↑ ↓ or the 'a' key and look at the location bar and the console
+</p>
+
+<a href="#left">
+  <key-bind key="ArrowLeft"></key-bind>
+  <!-- IE11 uses 'Left', 'Right', etc. -->
+  <key-bind key="Left"></key-bind>
+</a>
+
+<a href="#up">
+  <key-bind key="ArrowUp"></key-bind>
+  <key-bind key="Up"></key-bind>
+</a>
+
+<a href="#down">
+  <key-bind key="ArrowDown"></key-bind>
+  <key-bind key="Down"></key-bind>
+</a>
+
+<a href="#right">
+  <key-bind key="ArrowRight"></key-bind>
+  <key-bind key="Right"></key-bind>
+</a>
+<key-bind id="keyListener" key="a"></key-bind>
+
+<script>
+  const clicky = document.getElementById("keyListener");
+  clicky.addEventListener("click", function () {
+    console.log("Pressed A");
+  });
+</script>
+
+<span id="browser-sync-binding"></span>
