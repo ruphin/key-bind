@@ -2,13 +2,17 @@
   "name": "@ruphin/key-bind",
   "version": "1.0.0",
   "description": "A simple keybinding element",
-  "main": "key-bind.js",
-  "module": "key-bind.js",
+  "type": "module",
+  "main": "dist/key-bind.js",
+  "module": "dist/key-bind.js",
+  "exports": {
+    ".": "./dist/key-bind.js"
+  },
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "key-bind.js"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -26,11 +30,16 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "es-dev-server",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run --passWithNoTests",
+    "prepublishOnly": "npm run build",
     "release": "np"
   },
   "devDependencies": {
-    "es-dev-server": "^1.50.6",
-    "np": "^6.2.3"
+    "np": "^6.2.3",
+    "vite": "^8.3.3",
+    "vitest": "^5.0.3"
   }
 }
